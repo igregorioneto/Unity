@@ -1245,6 +1245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 712.3, y: 0, z: 280.69}
+  backPosition: {x: 708.3, y: 0, z: 280.75}
   moveDuration: 1
   isMoving: 0
 --- !u!1 &536693026

@@ -5,12 +5,16 @@ using UnityEngine;
 public class MovingRabbit : MonoBehaviour
 {
     [SerializeField] Vector3 targetPosition;
+    [SerializeField] Vector3 backPosition;
     [SerializeField] float moveDuration = 1f;
     [SerializeField] bool isMoving = true;
 
     void Start()
     {
-        targetPosition = new Vector3(712.3f, 0f, 280.69f);
+        if (targetPosition == null)
+            targetPosition = new Vector3(712.3f, 0f, 280.69f);
+        if (backPosition == null)
+            backPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -25,20 +29,24 @@ public class MovingRabbit : MonoBehaviour
     void MoveToTarget()
     {
         Debug.Log("MoveToTarget chamado.");
-        isMoving = true;
         iTween.MoveTo(gameObject,
             iTween.Hash(
                 "position", targetPosition, 
                 "time", moveDuration,
                 "easetype", iTween.EaseType.linear,
-                "oncomplete",
-                "OnMoveComplete"
-                ));
+                "oncomplete","OnMoveComplete"
+                )); 
+        isMoving = false;  
     }
 
     void OnMoveComplete()
     {
         Debug.Log("Movimento completado.");
-        isMoving = false;
+        iTween.MoveTo(gameObject,
+            iTween.Hash(
+                "position", backPosition,
+                "time", moveDuration,
+                "easetype", iTween.EaseType.linear
+            ));
     }
 }
