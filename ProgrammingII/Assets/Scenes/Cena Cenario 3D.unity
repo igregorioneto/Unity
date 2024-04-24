@@ -1828,7 +1828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56a50696d8a8958eb5b7672e5c7b4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantityMessages: 6
   messages:
   - Bom dia, em que posso ajudar?
   - "Voc\xEA \xE9 um grande guerreiro!"
@@ -5096,6 +5095,7 @@ GameObject:
   - component: {fileID: 2027156332}
   - component: {fileID: 2024968202}
   - component: {fileID: 2025009198}
+  - component: {fileID: 2027156333}
   m_Layer: 0
   m_Name: ThirdPersonController
   m_TagString: Player
@@ -5842,6 +5842,20 @@ CapsuleCollider:
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &2027156333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015263596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e5c3adf4ed60fad8f31b9331cf1235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 20
+  point: 100
 --- !u!1 &2047218780
 GameObject:
   m_ObjectHideFlags: 0
