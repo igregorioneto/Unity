@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
             if (savePoint != null)
             {
                 savePoint.FilePersistence(Life, Point, Position);
-                Debug.Log($"\tLife: {Life}\tPoint:{Point}\tPosition Player in World: {Position}\n");
+                //Debug.Log($"\tLife: {Life}\tPoint:{Point}\tPosition Player in World: {Position}\n");
             }
             else
             {
