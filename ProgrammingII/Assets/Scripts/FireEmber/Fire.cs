@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] ParticleSystem fireParticle;
+    private bool playerInRange = false;
+
+    private void StopEmission()
     {
-        
+        var emission = fireParticle.emission;
+        emission.enabled = false;
+    }
+    
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player entrou do alcance do Fogo.");
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player saiu do alcance do Fogo.");
+            playerInRange = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Apagando o fogo!");
+            StopEmission();
+        }
     }
 }
