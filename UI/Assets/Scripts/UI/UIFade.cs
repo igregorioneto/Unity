@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class UIFade : MonoBehaviour
 {
     [SerializeField] float tempo = 0.5f;
-    Image[] images;
-    Text[] texts;
-    float[] imageAlpha, textAlpha;
+    protected Image[] images;
+    protected Text[] texts;
+    protected float[] imageAlpha, textAlpha;
 
     public void Ativar()
     {
