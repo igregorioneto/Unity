@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIFade : MonoBehaviour
 {
-    [SerializeField] float tempo = 0.5f;
+    public float tempo = 0.5f;
     protected Image[] images;
     protected Text[] texts;
     protected float[] imageAlpha, textAlpha;
@@ -69,7 +69,7 @@ public class UIFade : MonoBehaviour
             );
     }
 
-    private void Awake() {
+    protected void Awake() {
         images = gameObject.GetComponentsInChildren<Image>();
         imageAlpha = new float[images.Length];
         for (int i = 0; i < images.Length; i++)

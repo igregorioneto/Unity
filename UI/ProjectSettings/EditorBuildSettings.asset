@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Cena Menu.unity
+    guid: 959325b37073b4efa81db6823d2818c9
+  - enabled: 1
+    path: Assets/Scenes/Cena Cenario 3D.unity
+    guid: e5bfba241ff8fb045ba2d6702dc7b0d4
   m_configObjects: {}
