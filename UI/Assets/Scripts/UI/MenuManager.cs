@@ -55,13 +55,13 @@ public class MenuManager : MonoBehaviour
 
 
     // Methods Unity
-    void Start()
+    private void Start()
     {
         podeClicar = true;
         UICanvas[] todosCanvas = GameObject.FindObjectsOfType<UICanvas>();
         for (int i = 0; i < todosCanvas.Length; i++)
         {
-           todosCanvas[i].Desligar(); 
+            todosCanvas[i].Desligar();
         }
         canvasAtual.Ligar();
     }
