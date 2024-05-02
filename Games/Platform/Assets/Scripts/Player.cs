@@ -20,15 +20,26 @@ public class Player : MonoBehaviour
             return;
         }
 
+        // Verifica se o personagem esta no chão
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
         float moveDirection = 0f;
+        if (moveDirection == 0)
+        {
+            animator.SetBool("isGrounded", true);
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", false);
+        }
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             moveDirection = -1f;
+            animator.SetBool("isRunning", true);
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             moveDirection = 1f;
+            animator.SetBool("isRunning", true);
         }
         
         rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
@@ -41,17 +52,18 @@ public class Player : MonoBehaviour
             transform.localScale = localScale;
         }
 
-        // Verifica se o personagem esta no chão
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        // Controlar a animação do personagem
-        animator.SetBool("idle", isGrounded);
-        animator.SetBool("run", moveDirection != 0);
-        animator.SetBool("jump", !isGrounded);
-
         if (isGrounded && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", true);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                        
+        }
+        else if (isGrounded && moveDirection == 0)
+        {
+            animator.SetBool("isGrounded", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isRunning", false);
         }
     }
 
