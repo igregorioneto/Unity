@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private Rigidbody2D rb;
     private Transform groundCheck;
-    private float groundCheckRadius = 0.2f;    
+    private float groundCheckRadius = 0.2f;  
+    private Animator animator;  
 
     private void MovePlayer()
     {
@@ -25,14 +26,28 @@ public class Player : MonoBehaviour
         {
             moveDirection = -1f;
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             moveDirection = 1f;
         }
         
         rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
 
+        // Virar o sprite para a direção correta
+        if (moveDirection != 0)
+        {
+            Vector3 localScale = transform.localScale;
+            localScale.x = Mathf.Abs(localScale.x) * moveDirection;
+            transform.localScale = localScale;
+        }
+
+        // Verifica se o personagem esta no chão
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        // Controlar a animação do personagem
+        animator.SetBool("idle", isGrounded);
+        animator.SetBool("run", moveDirection != 0);
+        animator.SetBool("jump", !isGrounded);
 
         if (isGrounded && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
@@ -45,6 +60,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         groundCheck = transform.Find("GroundCheck");
+        animator = GetComponent<Animator>();
         if (groundCheck == null)
         {
             Debug.LogError("GroundCheck não encontrado! Certifique-se de que um objeto chamado 'GroundCheck' está presente como filho do Player.");
