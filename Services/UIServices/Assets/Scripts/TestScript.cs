@@ -11,9 +11,9 @@ public class TestScript : MonoBehaviour
     public string loginPassword;
     void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
             AuthManager.RegisterUser(registerUsername, registerPassword);
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L))
             AuthManager.LoginUser(loginUsername, loginPassword);
     }
 }

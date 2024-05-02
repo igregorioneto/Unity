@@ -19,7 +19,7 @@ public class AuthManager : MonoBehaviour
     }
 
     private readonly string urlRegister = "http://localhost:5046/register";
-    private readonly string urlLogin = "http://localhost:5046/register";
+    private readonly string urlLogin = "http://localhost:5046/login";
 
     public static void RegisterUser(string username, string password)
     {
@@ -28,30 +28,27 @@ public class AuthManager : MonoBehaviour
 
     private IEnumerator RegisterUserAsync(string username, string password)
     {
-        var request = new
+        var user = new UserData();
+        user.username = username;
+        user.password = password;
+
+        string json = JsonUtility.ToJson(user);
+
+        var req = new UnityWebRequest(urlRegister, "POST");
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+        req.uploadHandler = new UploadHandlerRaw(jsonToSend);
+        req.downloadHandler = new DownloadHandlerBuffer();
+        req.SetRequestHeader("Content-Type", "application/json");
+
+        yield return req.SendWebRequest();
+
+        if (req.isNetworkError)
         {
-            Username = username,
-            Password = password
-        };
-
-        string jsonRequest = JsonUtility.ToJson(request);
-        UnityWebRequest webRequest = new UnityWebRequest(urlRegister, "POST");
-        byte[] jsonToSend = new System.Text.UnicodeEncoding().GetBytes(jsonRequest);
-        webRequest.uploadHandler = new UploadHandlerRaw(jsonToSend);
-        webRequest.downloadHandler = new DownloadHandlerBuffer();
-
-        webRequest.SetRequestHeader("Content-Type", "application/json");
-        webRequest.SetRequestHeader("accept", "*/*"); 
-
-        yield return webRequest.SendWebRequest();
-
-        if (webRequest.result == UnityWebRequest.Result.Success)
-        {
-            Debug.Log("User registered successfully");
+            Debug.Log("Error While Sending: " + req.error);
         }
         else
         {
-            Debug.LogError($"Error: {webRequest.error}");
+            Debug.Log("Received: " + req.downloadHandler.text);
         }
     }
 
@@ -62,29 +59,34 @@ public class AuthManager : MonoBehaviour
 
     private IEnumerator LoginUserAsync(string username, string password)
     {
-        var request = new 
+        var user = new UserData();
+        user.username = username;
+        user.password = password;
+
+        string json = JsonUtility.ToJson(user);
+
+        var req = new UnityWebRequest(urlLogin, "POST");
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+        req.uploadHandler = new UploadHandlerRaw(jsonToSend);
+        req.downloadHandler = new DownloadHandlerBuffer();
+        req.SetRequestHeader("Content-Type", "application/json");
+
+        yield return req.SendWebRequest();
+
+        if (req.isNetworkError)
         {
-            Username = username,
-            Password = password
-        };
-
-        string jsonRequest = JsonUtility.ToJson(request);
-        UnityWebRequest webRequest = new UnityWebRequest(urlLogin, "POST");
-        byte[] jsonToSend = new System.Text.UnicodeEncoding().GetBytes(jsonRequest);
-        webRequest.uploadHandler = new UploadHandlerRaw(jsonToSend);
-        webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
-
-        yield return webRequest.SendWebRequest();
-
-        if (webRequest.result == UnityWebRequest.Result.Success)
-        {
-            Debug.Log("Login successful");
+            Debug.Log("Error While Sending: " + req.error);
         }
         else
         {
-            Debug.LogError($"Error: {webRequest.error}");
+            Debug.Log("Received: " + req.downloadHandler.text);
         }
 
     }
+}
+
+public class UserData 
+{
+    public string username;
+    public string password;
 }
