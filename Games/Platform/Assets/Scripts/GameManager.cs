@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] AudioClip somDerrota, somVitoria, somMoeda, somDano;
     [SerializeField] Sprite[] spritesVida;
     [SerializeField] Image[] imagensVida;
     [SerializeField] GameObject telaVitoria, telaDerrota;
@@ -37,18 +38,24 @@ public class GameManager : MonoBehaviour
 
     public void CapturarMoeda()
     {
+        if (somMoeda != null)
+           AudioSource.PlayClipAtPoint(somMoeda, Camera.main.transform.position);
         pontuacao += 1;
         textoPontuacao.text = $"{pontuacao}";
     }
 
     public void Derrota()
     {
+        if (somDerrota != null)
+           AudioSource.PlayClipAtPoint(somDerrota, Camera.main.transform.position);
         telaDerrota.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void Ganhou()
     {
+        if (somVitoria != null)
+           AudioSource.PlayClipAtPoint(somVitoria, Camera.main.transform.position);
         telaVitoria.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -59,6 +66,9 @@ public class GameManager : MonoBehaviour
            return;
         poderTomarDano = false;
         Invoke("PoderTomarDano", 1.5f);
+
+        if (somDano != null)
+           AudioSource.PlayClipAtPoint(somDano, Camera.main.transform.position);
 
         vidas--;
         if (vidas > 0)
