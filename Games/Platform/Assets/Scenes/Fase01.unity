@@ -2035,6 +2035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1112351198}
   - component: {fileID: 1112351199}
+  - component: {fileID: 1112351200}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -2070,6 +2071,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundButton: {fileID: 8300000, guid: 82065b14258837fdd943f996b9cce122, type: 3}
+--- !u!114 &1112351200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112351197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba36debcb5f8cc118c5c991f8a48eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesVida:
+  - {fileID: 880618152, guid: 5308a69440b7f064ebbcc67d81e42ecc, type: 3}
+  - {fileID: 198392316, guid: 5308a69440b7f064ebbcc67d81e42ecc, type: 3}
+  - {fileID: -388991610, guid: 5308a69440b7f064ebbcc67d81e42ecc, type: 3}
+  imagensVida:
+  - {fileID: 2023873126}
+  - {fileID: 1582520200}
+  - {fileID: 1802912814}
+  telaVitoria: {fileID: 1771752791}
+  telaDerrota: {fileID: 334067667}
+  textoPontuacao: {fileID: 449654285}
 --- !u!1 &1159422595
 GameObject:
   m_ObjectHideFlags: 0
@@ -6105,7 +6129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1771752792
 RectTransform:
   m_ObjectHideFlags: 0
