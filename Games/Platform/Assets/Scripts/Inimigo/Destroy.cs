@@ -8,7 +8,7 @@ public class Destroy : MonoBehaviour
         if (other.gameObject.tag.Contains("Player"))
         {
             GameManager.Instance.CapturarMoeda();
-            Destroy(gameObject.transform.gameObject.gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }

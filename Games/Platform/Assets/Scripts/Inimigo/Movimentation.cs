@@ -8,6 +8,13 @@ public class Movimentation : MonoBehaviour
     private bool left;
     private new Rigidbody2D rigidbody;
 
+    private void Flip()
+    {
+        Vector3 rotation = transform.eulerAngles;
+        rotation.y = (left) ? 180f : 0f;
+        transform.eulerAngles = rotation;
+    }
+
     private void Start() {
         left = false;
         rigidbody = GetComponent<Rigidbody2D>();
@@ -15,13 +22,8 @@ public class Movimentation : MonoBehaviour
         if (Random.Range(0f, 100f) < 50f)
         {
             left = true;
-            transform.localScale = new Vector3(
-                -1 * transform.localScale.x,
-                transform.localScale.y,
-                transform.localScale.z
-            );
         }
-
+        Flip();
         Moviment();
     }
 
@@ -40,6 +42,5 @@ public class Movimentation : MonoBehaviour
            force = new Vector2(speed, 0);
         rigidbody.AddForce(force);
     }
-
 
 }
