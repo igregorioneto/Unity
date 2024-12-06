@@ -1,0 +1,53 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity specific files
+.DS_Store
+*.apk
+*.unitypackage
+*.prefab.meta
+*.asset.meta
+*.pidb.meta
+*.pdb.meta
+
+# Visual Studio Code specific files
+.vscode/
+
+# Rider specific files
+.idea/
+
+# Exclude Crashlytics and Firebase files
+crashlytics-build.properties
+google-services-desktop.json
+google-services.json
+GoogleService-Info.plist
+
+# Exclude auto-generated asset files
+Assets/Plugins/Android/*.meta
+
+# Include build files (optional, remove if not required)
+!Build/
+
+# Add this if you use Git LFS for large files
+# *.psd
+# *.tiff

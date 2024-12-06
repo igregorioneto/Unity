@@ -1,0 +1,50 @@
+# Build files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Mono auto-generated files
+.mono/
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.temp
+*.log
+
+# Visual Studio specific files
+.vscode/
+*.vs/
+.vs/
+*.csproj.user
+*.sln.docstates
+
+# Rider specific files
+.idea/
+
+# ReSharper files
+_ReSharper*/
+
+# Exclude build outputs
+*.dll
+*.exe
+*.app
+*.ipa
+*.dmg
+*.pdb
+
+# nuget packages
+*.nupkg
+*.nuget/
+
+# Logs and database files
+*.log
+*.mdf
+*.ldf
+
+# Include if using Azure DevOps
+*.tfstate
+.terraform/
