@@ -4,3 +4,4 @@ using Study.funcoes;
 
 funcaoTexto.Run();
 funcaoData.Run();
+conversaoDados.Run();
