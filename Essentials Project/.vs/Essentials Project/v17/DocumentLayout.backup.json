@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\assets\\_unity essentials\\scripts\\dooropener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|c:\\users\\igreg\\documents\\my\\projetos\\unity\\essentials project\\assets\\_unity essentials\\source files\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|solutionrelative:assets\\_unity essentials\\source files\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|c:\\users\\igreg\\documents\\my\\projetos\\unity\\essentials project\\assets\\_unity essentials\\scripts\\dooropener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|solutionrelative:assets\\_unity essentials\\scripts\\dooropener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|c:\\users\\igreg\\documents\\my\\projetos\\unity\\essentials project\\assets\\_unity essentials\\scripts\\provided scripts\\collectible2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\assets\\_unity essentials\\scripts\\provided scripts\\collectible2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A72142B5-0481-CE6E-B2B5-F2CBBD840350}|Assembly-CSharp.csproj|solutionrelative:assets\\_unity essentials\\scripts\\provided scripts\\collectible2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ThirdPersonController.cs",
+              "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Source Files\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "RelativeDocumentMoniker": "Assets\\_Unity Essentials\\Source Files\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "ToolTip": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Source Files\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "RelativeToolTip": "Assets\\_Unity Essentials\\Source Files\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAjwAEBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T22:38:26.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Collectible2D.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Scripts\\Provided Scripts\\Collectible2D.cs",
               "RelativeDocumentMoniker": "Assets\\_Unity Essentials\\Scripts\\Provided Scripts\\Collectible2D.cs",
@@ -54,12 +71,11 @@
               "RelativeToolTip": "Assets\\_Unity Essentials\\Scripts\\Provided Scripts\\Collectible2D.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwBUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:32:44.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T22:32:44.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerController2D.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Scripts\\Provided Scripts\\PlayerController2D.cs",
               "RelativeDocumentMoniker": "Assets\\_Unity Essentials\\Scripts\\Provided Scripts\\PlayerController2D.cs",
@@ -71,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DayNightCycle.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Scripts\\DayNightCycle.cs",
               "RelativeDocumentMoniker": "Assets\\_Unity Essentials\\Scripts\\DayNightCycle.cs",
@@ -83,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DoorOpener.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Scripts\\DoorOpener.cs",
               "RelativeDocumentMoniker": "Assets\\_Unity Essentials\\Scripts\\DoorOpener.cs",
@@ -96,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Collectible.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Scripts\\Collectible.cs",
               "RelativeDocumentMoniker": "Assets\\_Unity Essentials\\Scripts\\Collectible.cs",
@@ -108,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\_Unity Essentials\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\_Unity Essentials\\Scripts\\PlayerController.cs",
@@ -120,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UniversalAdditionalCameraData.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Library\\PackageCache\\com.unity.render-pipelines.universal\\Runtime\\UniversalAdditionalCameraData.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal\\Runtime\\UniversalAdditionalCameraData.cs",
@@ -132,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "NewEmptyCSharpScript.cs",
               "DocumentMoniker": "C:\\Users\\igreg\\Documents\\My\\Projetos\\Unity\\Essentials Project\\Assets\\NewEmptyCSharpScript.cs",
               "RelativeDocumentMoniker": "Assets\\NewEmptyCSharpScript.cs",
