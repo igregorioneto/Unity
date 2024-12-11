@@ -2,9 +2,13 @@
 using funcoes.livrocsharp;
 using Study.colecoes;
 using Study.funcoes;
+using Study.oop;
+using Study.oop.Jogadores;
 
-funcaoTexto.Run();
+/*funcaoTexto.Run();
 funcaoData.Run();
 conversaoDados.Run();
 RealizarPedido.Run();
-colecoes.Run();
+colecoes.Run();*/
+//oop.Run();
+Programa.Run();
